@@ -1,5 +1,7 @@
 # Project Template -- Next.js + TypeScript + Tailwind v4 (config-less) + ESLint (flat) + Vitest + Copilot
 
+[![CI](https://github.com/andrewteece/project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/andrewteece/project-template/actions/workflows/ci.yml)
+
 A reusable starter you can clone for new apps. Batteries included:
 
 - Next.js (App Router), TypeScript, **Tailwind v4 (no ‘tailwind.config.\*’)**
