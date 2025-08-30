@@ -13,15 +13,15 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "plugins": [{ "name": "next" }],
+
+    // Path aliases for "@/..."
+    "baseUrl": ".",
+    "paths": { "@/*": ["./src/*"] },
+
+    // 👇 Test typings: fixes 'unsafe call/member access' on expect(...).toBeInTheDocument()
+    "types": ["vitest/globals", "@testing-library/jest-dom", "node"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/test/setup.ts"],
   "exclude": ["node_modules"]
 }
