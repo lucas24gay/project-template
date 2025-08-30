@@ -1,0 +1,439 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R 5 0 R 6 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 9 0 R >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 10 0 R >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 11 0 R >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 12 0 R >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+9 0 obj
+<< /Length 1504 >>
+stream
+BT
+/F1 11 Tf
+1 0 0 1 50 742 Tm
+14 TL
+T*
+(# Project Template ? Next.js + TypeScript + Tailwind v4 \(config-less\) + ESLint \(flat\) + Vitest ) Tj
+T*
+(+ Copilot) Tj
+T*
+() Tj
+T*
+(A reusable starter you can clone for new apps. Batteries included:) Tj
+T*
+() Tj
+T*
+(- Next.js \(App Router\), TypeScript, **Tailwind v4 \(no `tailwind.config.*`\)**) Tj
+T*
+(- ESLint \(flat config\) + Prettier wired to VS Code on save) Tj
+T*
+(- Vitest + React Testing Library \(+ providers helper\)) Tj
+T*
+(- VS Code workspace files \(`.vscode`\)) Tj
+T*
+(- Copilot prompt playbook \(`.copilot/prompts`\)) Tj
+T*
+(- Dual dev servers: **Turbopack** \(fast\) and **Webpack** \(fallback\)) Tj
+T*
+() Tj
+T*
+(---) Tj
+T*
+() Tj
+T*
+(## Requirements) Tj
+T*
+() Tj
+T*
+(- Node LTS \(? 18\)) Tj
+T*
+(- pnpm \(? 8\)) Tj
+T*
+() Tj
+T*
+(> Tip: keep pnpm in sync  ) Tj
+T*
+(> `corepack enable && corepack prepare pnpm@latest --activate`) Tj
+T*
+() Tj
+T*
+(---) Tj
+T*
+() Tj
+T*
+(## Getting Started) Tj
+T*
+() Tj
+T*
+(```bash) Tj
+T*
+(pnpm install) Tj
+T*
+(pnpm dev        # Turbopack \(fast\)) Tj
+T*
+(# or:) Tj
+T*
+(pnpm dev:web    # Webpack \(fallback\)) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Open http://localhost:3000) Tj
+T*
+() Tj
+T*
+(---) Tj
+T*
+() Tj
+T*
+(## Scripts) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "dev": "next dev --turbopack",) Tj
+T*
+(  "dev:web": "next dev --no-turbo",) Tj
+T*
+(  "build": "next build --turbopack",) Tj
+T*
+(  "start": "next start",) Tj
+T*
+(  "lint": "eslint .",) Tj
+T*
+(  "lint:fix": "eslint . --fix",) Tj
+T*
+(  "test": "vitest",) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Length 1823 >>
+stream
+BT
+/F1 11 Tf
+1 0 0 1 50 742 Tm
+14 TL
+T*
+(  "test:run": "vitest run",) Tj
+T*
+(  "test:coverage": "vitest run --coverage") Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(---) Tj
+T*
+() Tj
+T*
+(## VS Code) Tj
+T*
+() Tj
+T*
+(This repo includes workspace files so everyone shares the same tooling:) Tj
+T*
+() Tj
+T*
+(- **`.vscode/extensions.json`** ? recommended extensions \(Copilot, ESLint, Prettier, Tailwind ) Tj
+T*
+(CSS IntelliSense, Vitest Explorer, GitLens, etc.\)) Tj
+T*
+(- **`.vscode/settings.json`** ? use project TS SDK, run ESLint fixes + organize imports on ) Tj
+T*
+(save, Tailwind IntelliSense \(incl. `cva\(\)` / `tv\(\)` regex\)) Tj
+T*
+(- **`.vscode/tasks.json`** ? run `dev`, `dev:web`, `build`, `start` from the Task Runner) Tj
+T*
+(- **`.vscode/launch.json`** ? debug **Next.js dev** and **Vitest current file**) Tj
+T*
+() Tj
+T*
+(---) Tj
+T*
+() Tj
+T*
+(## Tailwind v4 \(config-less\)) Tj
+T*
+() Tj
+T*
+(- This template uses **Tailwind v4** in **zero-config** mode ? there is **no** ) Tj
+T*
+(`tailwind.config.*` file.) Tj
+T*
+(- Tailwind v4 directives are already present in `src/app/globals.css`.) Tj
+T*
+(- If you later need deep customization, you can add a `tailwind.config.*` file; it?s not ) Tj
+T*
+(required for most apps.) Tj
+T*
+() Tj
+T*
+(> We intentionally **do not** include `eslint-plugin-tailwindcss` because current releases ) Tj
+T*
+(conflict with Tailwind v4 internals. VS Code?s Tailwind IntelliSense still provides class ) Tj
+T*
+(completion and validation.) Tj
+T*
+() Tj
+T*
+(---) Tj
+T*
+() Tj
+T*
+(## Linting & Formatting) Tj
+T*
+() Tj
+T*
+(- Flat config: `eslint.config.mjs`) Tj
+T*
+(- Prettier: `.prettierrc`) Tj
+T*
+() Tj
+T*
+(On save, VS Code:) Tj
+T*
+() Tj
+T*
+(- Formats with Prettier) Tj
+T*
+(- Applies ESLint fixes and organizes imports) Tj
+T*
+() Tj
+T*
+(Run manually:) Tj
+T*
+() Tj
+T*
+(```bash) Tj
+T*
+(pnpm run lint) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Length 1455 >>
+stream
+BT
+/F1 11 Tf
+1 0 0 1 50 742 Tm
+14 TL
+T*
+(pnpm run lint:fix) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(---) Tj
+T*
+() Tj
+T*
+(## Testing) Tj
+T*
+() Tj
+T*
+(- Runner: **Vitest** \(JSDOM\)) Tj
+T*
+(- Config: `vitest.config.ts` \(uses `@vitejs/plugin-react` + `vite-tsconfig-paths`\)) Tj
+T*
+(- Global setup: `src/test/setup.ts`) Tj
+T*
+(- Helper: `src/test/renderWithProviders.tsx`) Tj
+T*
+(- Example: `src/app/__tests__/page.test.tsx`) Tj
+T*
+() Tj
+T*
+(First run:) Tj
+T*
+() Tj
+T*
+(```bash) Tj
+T*
+(pnpm test) Tj
+T*
+(# or non-watch:) Tj
+T*
+(pnpm test:run) Tj
+T*
+(# with coverage:) Tj
+T*
+(pnpm test:coverage) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(**Notes**) Tj
+T*
+() Tj
+T*
+(- JSX in tests works via `@vitejs/plugin-react` \(no need to `import React`\).) Tj
+T*
+(- `next-themes` is mocked in `src/test/setup.ts` to avoid hook-context errors during unit ) Tj
+T*
+(tests.) Tj
+T*
+() Tj
+T*
+(---) Tj
+T*
+() Tj
+T*
+(## Copilot Prompt Playbook) Tj
+T*
+() Tj
+T*
+(Reusable prompts live in **`.copilot/prompts/`**:) Tj
+T*
+() Tj
+T*
+(- `refactor-guardrails.md` ? safer refactors \(types, a11y, Tailwind ordering\)) Tj
+T*
+(- `tests-vitest.md` ? generate RTL tests \(AAA structure, a11y-first\)) Tj
+T*
+(- `commit-style.md` ? Conventional Commits) Tj
+T*
+() Tj
+T*
+(**How to use**) Tj
+T*
+() Tj
+T*
+(In Copilot Chat:) Tj
+T*
+() Tj
+T*
+(```) Tj
+T*
+(@workspace /open .copilot/prompts/refactor-guardrails.md) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Click **Use as system prompt**, then ask for the refactor and apply the diff.  ) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Length 1610 >>
+stream
+BT
+/F1 11 Tf
+1 0 0 1 50 742 Tm
+14 TL
+T*
+(Inline Chat \(**Cmd+Shift+I**\) works great for small/local changes.) Tj
+T*
+() Tj
+T*
+(---) Tj
+T*
+() Tj
+T*
+(## Project Structure) Tj
+T*
+() Tj
+T*
+(```txt) Tj
+T*
+(.vscode/                # workspace settings, tasks, launch, extension recs) Tj
+T*
+(.copilot/prompts/       # prompt playbook for Copilot) Tj
+T*
+(src/) Tj
+T*
+(  app/                  # Next.js App Router) Tj
+T*
+(  app/globals.css       # Tailwind v4 directives live here \(no tailwind.config.*\)) Tj
+T*
+(  test/) Tj
+T*
+(    renderWithProviders.tsx) Tj
+T*
+(    setup.ts            # JSDOM, RTL cleanup, minimal mocks \(e.g., next-themes\)) Tj
+T*
+(eslint.config.mjs       # flat config \(typed TS rules + React/a11y/imports\)) Tj
+T*
+(vitest.config.ts        # Vitest + vite-tsconfig-paths + @vitejs/plugin-react) Tj
+T*
+(postcss.config.mjs      # PostCSS pipeline \(used by Tailwind v4\)) Tj
+T*
+(tsconfig.json           # baseUrl + paths + test typings \(vitest/jest-dom\)) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(---) Tj
+T*
+() Tj
+T*
+(## 2-Minute Smoke Test) Tj
+T*
+() Tj
+T*
+(1. **Dev server** ? `pnpm dev` ? open the app.  ) Tj
+T*
+(2. **Format/Lint** ? add sloppy code and **Save** ? auto-format + ESLint fixes.  ) Tj
+T*
+(3. **Tests** ? `pnpm test` ? example spec passes.  ) Tj
+T*
+(4. **Copilot** ? select a component ? **Cmd+Shift+I** ?  ) Tj
+T*
+(   ?Refactor into smaller components using `@workspace /open .copilot/prompts/refactor-) Tj
+T*
+(guardrails.md`? ? apply diff.  ) Tj
+T*
+(5. **Tailwind IntelliSense** ? in `className=""` and inside `cva\(\)`/`tv\(\)`, type `bg-` and ) Tj
+T*
+(confirm suggestions.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000139 00000 n 
+0000000265 00000 n 
+0000000392 00000 n 
+0000000519 00000 n 
+0000000646 00000 n 
+0000000000 65535 f 
+0000000716 00000 n 
+0000002272 00000 n 
+0000004148 00000 n 
+0000005656 00000 n 
+trailer
+<< /Size 13 /Root 1 0 R >>
+startxref
+7319
+%%EOF
