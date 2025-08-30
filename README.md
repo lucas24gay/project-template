@@ -161,25 +161,6 @@ Inline Chat (**Cmd+Shift+I**) works great for small/local changes.
 
 ---
 
-## Project Structure
-
-```
-
-├── .vscode/ # workspace settings, tasks, launch, extension recs
-├── .copilot/prompts/ # prompt playbook for Copilot
-├── src/
-│ ├── app/ # Next.js App Router
-│ ├── app/globals.css # Tailwind v4 directives live here (no tailwind.config.\*)
-│ └── test/
-│ ├── renderWithProviders.tsx
-│ ├── setup.ts # JSDOM, RTL cleanup, minimal mocks (e.g., next-themes)
-├── eslint.config.mjs # flat config (typed TS rules + React/a11y/imports)
-├── vitest.config.ts # Vitest + vite-tsconfig-paths + @vitejs/plugin-react
-├── postcss.config.mjs # PostCSS pipeline (used by Tailwind v4)
-├── tsconfig.json # baseUrl + paths + test typings (vitest/jest-dom)
-
-```
-
 ---
 
 ## 2-Minute Smoke Test
