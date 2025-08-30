@@ -1,4 +1,4 @@
-# Project Template ? Next.js + TypeScript + Tailwind v4 (config-less) + ESLint (flat) + Vitest + Copilot
+# Project Template -- Next.js + TypeScript + Tailwind v4 (config-less) + ESLint (flat) + Vitest + Copilot
 
 A reusable starter you can clone for new apps. Batteries included:
 
@@ -153,9 +153,6 @@ In Copilot Chat:
 Click **Use as system prompt**, then ask for the refactor and apply the diff.
 
 ---
-
-
-## Page 4
 
 Inline Chat (**Cmd+Shift+I**) works great for small/local changes.
 
