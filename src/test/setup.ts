@@ -24,3 +24,13 @@ vi.mock('next/navigation', () => {
     useSearchParams: () => new URLSearchParams(),
   };
 });
+
+// Make next-themes a no-op in tests
+vi.mock('next-themes', () => {
+  return {
+    __esModule: true,
+    // return children directly to avoid JSX in a .ts file
+    ThemeProvider: ({ children }: { children: React.ReactNode }): React.ReactNode => children,
+    useTheme: () => ({ theme: 'light', setTheme: vi.fn() }),
+  };
+});

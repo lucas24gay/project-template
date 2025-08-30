@@ -4,7 +4,12 @@ import { renderWithProviders } from '@/test/renderWithProviders';
 
 import Home from '../page';
 
-it('renders the Next.js starter heading', () => {
+it('renders the starter page', () => {
   renderWithProviders(<Home />);
-  expect(screen.getByRole('heading', { name: /next\.js/i })).toBeInTheDocument();
+
+  // This line of text exists in the CNA starter
+  expect(screen.getByText(/get started by editing/i)).toBeInTheDocument();
+
+  // And there are several resource links
+  expect(screen.getAllByRole('link').length).toBeGreaterThan(0);
 });
