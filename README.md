@@ -4,11 +4,12 @@
 
 A reusable starter you can clone for new apps. Batteries included:
 
-- Next.js (App Router), TypeScript, **Tailwind v4 (no ‘tailwind.config.\*’)**
-- ESLint (flat config) + Prettier wired to VS Code on save
-- Vitest + React Testing Library (+ providers helper)
-- VS Code workspace files (‘.vscode’)
-- Copilot prompt playbook (‘.copilot/prompts’)
+- **Next.js (App Router)** + **TypeScript**
+- **Tailwind v4** in zero-config mode (no `tailwind.config.*`)
+- **ESLint flat config** + **Prettier** (with `.prettierignore`)
+- **Vitest** + React Testing Library + coverage (lcov) and a small Providers helper
+- Path aliases `@/*` wired via `vite-tsconfig-paths`
+- Husky + lint-staged pre-commit checks
 - Dual dev servers: **Turbopack** (fast) and **Webpack** (fallback)
 
 ---
