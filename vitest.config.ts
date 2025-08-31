@@ -1,17 +1,15 @@
-import react from '@vitejs/plugin-react';
-import tsconfigPaths from 'vite-tsconfig-paths';
+/// <reference types="vitest" />
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-  plugins: [
-    tsconfigPaths(),
-    react({ jsxRuntime: 'automatic' }), // no need to import React in each test
-  ],
   test: {
     environment: 'jsdom',
     globals: true,
-    setupFiles: ['./src/test/setup.ts'],
-    css: true,
-    coverage: { provider: 'v8', reporter: ['text', 'html'] },
+    coverage: {
+      provider: 'v8', // ✅ use @vitest/coverage-v8
+      reporter: ['text', 'lcov'], // ✅ lcov for Codecov, text for CI logs
+      reportsDirectory: 'coverage',
+      exclude: ['node_modules/', '.next/', 'dist/', 'coverage/', '**/*.d.ts', '**/__tests__/**'],
+    },
   },
 });
