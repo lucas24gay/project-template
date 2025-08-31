@@ -16,13 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Install pnpm (locked to v9 to match package.json)
+      # Let the action read the pinned version from package.json "packageManager"
       - uses: pnpm/action-setup@v4
         with:
-          version: 9
           run_install: false
 
-      # Setup Node + enable pnpm cache
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -30,8 +28,6 @@ jobs:
 
       - name: Install deps
         run: pnpm install --frozen-lockfile
-
-      # ---------- Quality gates ----------
 
       - name: Prettier
         run: pnpm prettier --check . --ignore-path .prettierignore
@@ -45,15 +41,10 @@ jobs:
       - name: Tests
         run: pnpm run test:run
 
-      # ---------- Coverage (generate lcov for optional Codecov) ----------
       - name: Tests (coverage)
         run: pnpm run test:coverage -- --coverage.reporter=lcov
 
-      # ---------- Optional: upload to Codecov ----------
-      # To enable:
-      # 1) Add a repo secret: CODECOV_TOKEN
-      # 2) Uncomment the step below
-      #
+      # Optional: add Codecov later by uncommenting and adding CODECOV_TOKEN secret
       # - name: Upload coverage to Codecov
       #   uses: codecov/codecov-action@v4
       #   with:
